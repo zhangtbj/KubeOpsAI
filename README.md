@@ -29,6 +29,8 @@ KubeOpsAI addresses these challenges by introducing AI-driven insights and autom
 - **AI-Powered Commands**: Executes Kubernetes commands and provides summarized insights with AI-driven context.
 
 ## Architecture
+<img src="docs/flow.png" alt="KubeOpsAI Workflow" width="600"/>
+
 The architecture of KubeOpsAI is designed to integrate seamlessly with Kubernetes, offering the following core components:
 1. **KubeOpsAI UI**: A user-friendly dashboard for querying and visualizing insights.
 2. **KubeOpsAI Controller**: Manages requests and orchestrates the processing of commands.
