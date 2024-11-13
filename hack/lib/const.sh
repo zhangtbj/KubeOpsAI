@@ -1,0 +1,57 @@
+# shellcheck shell=bash
+# shellcheck disable=SC2034
+
+#
+# Dependencies
+#
+
+# Upgrade binary versions in a controlled fashion
+# along with the script contents (config, flags...)
+readonly STABLE_CONTROLLER_GEN_VERSION=v0.15.0
+readonly STABLE_KUBEBUILDER_VERSION=3.10.0
+readonly STABLE_GQLGEN_VERSION=v0.17.49
+readonly STABLE_HELM_VERSION=v3.6.3
+readonly STABLE_PROTOC_VERSION=v3.19.4
+readonly STABLE_PROTOC_GEN_GO_VERSION=v1.27.1
+readonly STABLE_PROTOC_GEN_GO_GRPC_VERSION=v1.2.0
+readonly STABLE_PROTOC_GEN_TS_VERSION=1.106.2
+
+#
+# Kubernetes installation
+#
+
+readonly CAPACT_NAMESPACE="capact-system"
+readonly CAPACT_RELEASE_NAME="capact"
+readonly DEV_CLUSTER_NAME="dev-capact"
+readonly KIND_CI_CLUSTER_NAME="kind-ci-capact"
+readonly K3D_CI_CLUSTER_NAME="k3d-ci-capact"
+
+#
+# OCF
+#
+
+readonly DEFAULT_OCF_VERSION="0.0.2"
+
+#
+# Infra
+#
+
+readonly JSON_GO_GEN_IMAGE_TAG="latest"
+readonly GRAPHQL_SCHEMA_LINTER_IMAGE_TAG="latest"
+
+#
+# Development
+#
+
+readonly CAPACT_ENABLE_POPULATOR="true"
+readonly CAPACT_USE_TEST_SETUP="false"
+
+#
+# Cluster Configuration
+#
+
+readonly CAPACT_INCREASE_RESOURCE_LIMITS="true"
+readonly CAPACT_HUB_MANIFESTS_SOURCE_REPO_URL="github.com/capactio/hub-manifests"
+# The git ref to checkout. It can point to a commit SHA, a branch name, or a tag.
+# If you want to use your forked version, remember to update CAPACT_HUB_MANIFESTS_SOURCE_REPO_URL  respectively.
+readonly CAPACT_HUB_MANIFESTS_SOURCE_REPO_REF="main"
